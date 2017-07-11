@@ -1,6 +1,6 @@
-# Game Proposal
-# WireFrame image 'img/proj1-wireframe.jpg'
 # Trello Story Board 'https://trello.com/b/kJWFymbe/missile-command'
+
+# Game Proposal
 
 		*Missle Command*
 

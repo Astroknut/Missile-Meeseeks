@@ -1,11 +1,11 @@
-h1 {
-	color: red;
-	font-size: 100px;
+html, body {
+	height: 100%;
+	width: 100%;
 }
 
-section {
-	text-align: center;
-}
+
+
+/*Landing Page Styles */
 
 .twitter {
 	display: inline-block;
@@ -13,4 +13,36 @@ section {
 
 .facebook {
 	display: inline-block;
+}
+
+
+/*Game Page Styles*/
+
+.gamePort {
+	width: 600px;
+	height: 500px;
+	background-color: red;
+}
+
+.dashboard {
+	background-color: gray;
+}
+
+.missileCount {
+	background-color: yellow;
+}
+
+.scoreBoard {
+	background-color: blue;
+}
+
+.timer {
+	background-color: purple;
+}
+
+
+.textScroll {
+	width: 600px;
+	height: 200px;
+	background-color: green;
 }
