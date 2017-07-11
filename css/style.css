@@ -2,3 +2,15 @@ h1 {
 	color: red;
 	font-size: 100px;
 }
+
+section {
+	text-align: center;
+}
+
+.twitter {
+	display: inline-block;
+}
+
+.facebook {
+	display: inline-block;
+}

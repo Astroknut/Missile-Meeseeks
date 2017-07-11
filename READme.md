@@ -1,5 +1,6 @@
 # Game Proposal
 # WireFrame image 'img/proj1-wireframe.jpg'
+# Trello Story Board 'https://trello.com/b/kJWFymbe/missile-command'
 
 		*Missle Command*
 
@@ -20,4 +21,4 @@
 
 # Project Goals
  My goal with this project is to learn how to incorporate a smaller, playable area on the webpage using canvas. I intend to use canvas only on the interactive area of the game page, while using vanilla JS DOM manipulation to build and structure the rest of the game page dashboard. Directly under the canvas element, I will build a text area with a scrolling 'story' to further engage the player, and provide feedback on performance to declare a win or loss. 
- Once I have a functioning desktop based game, I hope to use a media query to restucture the viewport to be mainly occupied by the canvas, and include a compressed dashboard to the right or directly under the canvas while removing the textScroll to provide more playable room. 
+ Once I have a functioning desktop based game, I hope to use a media query to restucture the viewport to be mainly occupied by the canvas, and include a compressed dashboard to the right or directly under the canvas while removing the textScroll to provide more playable room. I also plan to build a touch-based event listener for mobile devices.
