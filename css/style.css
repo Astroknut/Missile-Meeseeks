@@ -7,9 +7,18 @@ html, body {
 
 /*Landing Page Styles */
 
+/*Centers all content/Set font-styles and sizes for landing page/
+  style and position social media links */
+.landing {
+	background: url(https://media.giphy.com/media/3rt6DMbY43be8/giphy.gif);
+	background-size: cover;
+}
+
 .header {
+	font-family: "Press Start 2P";
+	color: #12B127;
 	text-align: center;
-	font-size: 60px;
+	font-size: 50px;
 }
 
 .play {
@@ -17,7 +26,11 @@ html, body {
 }
 
 #playButton {
+	font-family: "Press Start 2P";
 	font-size: 50px;
+	color: #FB130F;
+	background-color: transparent;
+	border: 1px solid black;
 }
 
 .socialLinks {
@@ -32,16 +45,33 @@ html, body {
 	padding: 0 20px;
 }
 
+#twitterLogo {
+	height: 35px;
+	width: auto;
+}
+
 .facebook {
 	display: inline-block;
 	margin: 0 auto;
 	padding: 0 20px;
 }
 
+#fbLogo {
+	height: 40px;
+	width: auto;
+}
+
+/*Game PAge Styles*/
+
+/*Adds canvas border*/
+
+#canvas {
+	border: 1px solid black;
+}
 
 
-/*Game Page Styles*/
 
+/*Sizes and position */
 .gamePort {
 	width: 700px;
 	height: 500px;
@@ -56,30 +86,42 @@ html, body {
 	background-color: gray;
 	display: inline-block;
 	width: calc(100% - 700px);
-	height: 70%;
+	height: 499px;
 	float: right;
 
 }
 
 .missileCount {
-	background-color: yellow;
+	color: white;
+	background: url('../img/dashboard_1.jpg');
+	background-size: cover;
 	display: inline-block;
 	width: 48%;
 	height: 48%;
+	padding: 0 5px;
 	
 }
 
 .scoreBoard {
-	background-color: blue;
+	color: white;
+	background: url('../img/dashboard_2.jpg');
+	background-size: cover;
 	display: inline-block;
 	width: 48%;
 	height: 48%;
+	padding: 0 5px;
 
 }
 
 .timer {
-	background-color: purple;
-	height: 48%;
+	color: white;
+	background: url('../img/dashboard_3.jpg');
+	background-size: cover;
+	height: 50%;
+}
+
+h4 {
+	margin-top: 2px;
 }
 
 
