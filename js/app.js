@@ -11,7 +11,7 @@ function draw() {
 	ctx.fillStyle = '#668d3c';
 	ctx.fillRect(0, 450, 700, 50);
 
-		/*Base Locations*/
+		/*Base Locations(Top right of rect)*/
 	ctx.fillStyle = 'rgb(200, 0 , 0)';
 	ctx.fillRect(60, 430, 40, 30);
 	ctx.fillRect(160, 430, 40, 30);
@@ -20,7 +20,7 @@ function draw() {
 	ctx.fillRect(480, 430, 40, 30);
 	ctx.fillRect(580, 430, 40, 30);
 
-		/*Missile Silo Locations*/
+		/*Missile Silo Locations(top right of rect)*/
 	ctx.fillStyle = 'rgb(0, 0, 200)';
 	ctx.fillRect(10, 430, 30, 30);
 	ctx.fillRect(325, 430, 30, 30);
