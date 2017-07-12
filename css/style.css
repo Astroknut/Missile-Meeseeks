@@ -16,7 +16,7 @@ html, body {
 
 .header {
 	font-family: "Press Start 2P";
-	color: #12B127;
+	color: #39ff14;
 	text-align: center;
 	font-size: 50px;
 }
@@ -28,7 +28,7 @@ html, body {
 #playButton {
 	font-family: "Press Start 2P";
 	font-size: 50px;
-	color: #FB130F;
+	color: #ff073a;
 	background-color: transparent;
 	border: 1px solid black;
 }
