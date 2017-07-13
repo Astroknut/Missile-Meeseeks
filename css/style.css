@@ -202,11 +202,6 @@ h4 {
     from { width: 0; }
 }
 
-span{
-  animation: blink 1s infinite;
-  color: #00ff00;
-}
-
 @keyframes type2{
 0%{width: 0;}
 from {opacity:0;}
