@@ -6,22 +6,25 @@
 	<link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
 </head>
 <body class="gamePage">
-	<div class="gamePort">
-		<canvas id="canvas" width=698 height=499></canvas>
-	</div>
+    <div class="gamePort">
+      <div class="container">
+        <div class="crosshair"></div>
+      </div>
+      <canvas id="canvas" width="698" height="499"></canvas>
+    </div>
 
 	<section class="dashboard">
-		<div class="missileCount">
-			<h4>Missiles</h4>
-			<div class="missilesLeft">30</div>
+		<div class="message">
+			<h4>Mission Update:</h4>
+			<div class="roundMessage">Hurry Morty! There isn't much time! Mr. Meeseeks is out of control!</div>
 		</div>
 		<div class="scoreBoard">
-			<h4>Score</h4>
-			<div class="playerScore">100</div>
+			<h4>Flurbos</h4>
+			<div class="playerScore"></div>
 		</div>
 		<div class="round">
 			<h4>Round</h4>
-			<div class="roundCount">7</div>
+			<div class="roundCount"></div>
 		</div>
 	</section>
 
@@ -34,7 +37,10 @@
 	</div>
 
 
-
+<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
 <script type="text/javascript" src="js/app.js"></script>
 </body>
 </html>
