@@ -122,9 +122,8 @@ h1 {
 	background: url('../img/dashboard_2.jpg');
 	background-size: cover;
 	display: inline-block;
-	width: 49%;
+	width: 48%;
 	height: 50%;
-	
 }
 
 /*Center message contents in div, set top padding to push toward center*/
@@ -133,7 +132,7 @@ h1 {
 	font-family: "Press Start 2P";
 	color: #00ff00;
 	font-size: 15px;
-	padding-top: 30px;
+	height: 100%;
 }
 
 /*Assign background img, display inline-block to style next to message div,
@@ -144,7 +143,7 @@ h1 {
 	background: url('../img/dashboard_1.jpg');
 	background-size: cover;
 	display: inline-block;
-	width: 49%;
+	width: 48%;
 	height: 50%;
 }
 
@@ -187,7 +186,7 @@ h4 {
 	color: #00ff00;
 	width: 100%;
 	height: 150px;
-	padding: 30px;
+	padding: 70px;
 	background-color: #000000;
 	clear: both;
 }
