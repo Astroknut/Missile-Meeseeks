@@ -1,11 +1,13 @@
+/*Frame body and html element to fit entire page*/
 html, body {
 	height: 100%;
 	width: 100%;
 }
 
+/*Positions container and crosshair div over canvas space
+  Sets cursor in canvas to crosshair*/
 .container {
   position: relative;
-  background-color: green;
 }
 .crosshair {
   width: 699px;
@@ -18,6 +20,7 @@ html, body {
 
 /*Landing Page Styles */
 
+/*Positions and sizes images to fit on landing page*/
 #logo {
 	height: 90px;
 	width: auto;
@@ -31,28 +34,33 @@ html, body {
 	right: 250px;
 }
 
+/*Moves title up to fit closer to logo*/
 h1 {
 	margin-top: 0;
 }
 
-/*Centers all content/Set font-styles and sizes for landing page/
-  style and position social media links */
+/*Links background img to gif hosted on giphy.com(Unable to get working gif when saved
+  locally. Will update to ensure background is not removed*/
 .landing {
 	background: url(https://media.giphy.com/media/3rt6DMbY43be8/giphy.gif);
 	background-size: cover;
 }
 
+/*Size, position, and color of title*/
 .header {
 	font-family: "Press Start 2P";
-	color: #39ff14;
+	color: #00ff00;
 	text-align: center;
 	font-size: 50px;
 }
 
+/*Centers button*/
 .play {
 	text-align: center;
 }
 
+/*Positions button off-center to align better with image,
+  makes border transparent, and designated font styles*/
 #playButton {
 	position: relative;
 	right: 250px;
@@ -61,7 +69,7 @@ h1 {
 	font-size: 50px;
 	color: #02afc5;
 	background-color: transparent;
-	border: 1px solid black;
+	border: 1px solid transparent;
 }
 
 
@@ -71,7 +79,9 @@ h1 {
 	background-color: black;
 }
 
-/*Adds canvas border*/
+/*Adds canvas border, background image before animations, and contains 
+  image to the background size without repeating. Working to resize image
+  to full container space rather than leaving blank space at bottom*/
 
 #canvas {
 	border: 1px solid black;
@@ -81,7 +91,8 @@ h1 {
 
 
 
-/*Sizes and position */
+/*Sizes and position div containing canvas, background color set to look better
+  until starting canvas background image can be sized to fit full container*/
 .gamePort {
 	width: 700px;
 	height: 500px;
@@ -92,6 +103,9 @@ h1 {
 
 }
 
+/*Sets black background for dashboard for cleaning look,
+  Displays all contents inline-block for style, and sets width
+  to calculate fitting full width not occupied by canvas*/
 .dashboard {
 	background-color: black;
 	display: inline-block;
@@ -101,18 +115,19 @@ h1 {
 
 }
 
+/*Assign background img, font styles, width dimensions for style*/
 .message {
 	font-family: "Press Start 2P";
 	color: #00ff00;
 	background: url('../img/dashboard_2.jpg');
 	background-size: cover;
 	display: inline-block;
-	width: 48%;
-	height: 48%;
-	padding: 0 5px;
+	width: 49%;
+	height: 50%;
 	
 }
 
+/*Center message contents in div, set top padding to push toward center*/
 .roundMessage {
 	text-align: center;
 	font-family: "Press Start 2P";
@@ -121,18 +136,20 @@ h1 {
 	padding-top: 30px;
 }
 
+/*Assign background img, display inline-block to style next to message div,
+  font styles, */
 .scoreBoard {
 	font-family: "Press Start 2P";
 	color: #00ff00;
 	background: url('../img/dashboard_1.jpg');
 	background-size: cover;
 	display: inline-block;
-	width: 48%;
-	height: 48%;
-	padding: 0 5px;
-
+	width: 49%;
+	height: 50%;
 }
 
+/*Center text in div, top padding to push toward center, 
+  assign font styles*/
 .playerScore {
 	text-align: center;
 	font-family: "Press Start 2P";
@@ -141,6 +158,7 @@ h1 {
 	padding-top: 30px;
 }
 
+/*assign background img, font styles, height dimension to fit within dashboard*/
 .round {
 	font-family: "Press Start 2P";
 	color: #00ff00;
@@ -149,6 +167,7 @@ h1 {
 	height: 50%;
 }
 
+/*Centers text, tp padding to push toward center, assigns font styles*/
 .roundCount {
 	text-align: center;
 	font-family: "Press Start 2P";
@@ -157,11 +176,13 @@ h1 {
 	padding-top: 40px;
 }
 
+/*Margin keeps labels of dashboard divs at top just below top border*/
 h4 {
 	margin-top: 2px;
 }
 
-
+/*Assign font styles, width and height dimensions, background color
+  clears to push div below all other content*/
 .textScroll {
 	color: #00ff00;
 	width: 100%;
@@ -171,6 +192,9 @@ h4 {
 	clear: both;
 }
 
+/*STYLE AND ANIMATION EFFECTS FOR SCROLLING TEXT FEATURE
+  EACH LINE OF TEXT HAS A SET DELAY FOR SMOOTH AND READABLE TRANSITIONS
+  OVERFLOW HIDDEN KEEPS TEXT HIDDEN UNTIL CURSOR HAS MOVED PAST THAT POINT*/
 .narrator{   
     font-family: "Press Start 2P";
     font-size: 10px;
@@ -206,6 +230,25 @@ h4 {
     animation-delay: 11s;
     animation-fill-mode: forwards;
 }
+
+.narrator:nth-child(5){
+    white-space:nowrap;
+    overflow:hidden;
+    opacity:0;
+    animation: type3 5s steps(100, end);
+    animation-delay: 15s;
+    animation-fill-mode: forwards;
+}
+
+.narrator:nth-child(6){
+    white-space:nowrap;
+    overflow:hidden;
+    opacity:0;
+    animation: type3 5s steps(100, end);
+    animation-delay: 20s;
+    animation-fill-mode: forwards;
+}
+
  @keyframes type{
     from { width: 0; }
 }
@@ -233,3 +276,19 @@ to{opacity:1;}
 to{opacity:1;}
 100%{opacity:1;}
 }  
+
+@keyframes type5{
+  0%{width: 0;}
+  from {opacity:0;}
+1%{opacity:1;}
+to{opacity:1;}
+100%{opacity:1;}
+} 
+
+@keyframes type6{
+  0%{width: 0;}
+  from {opacity:0;}
+1%{opacity:1;}
+to{opacity:1;}
+100%{opacity:1;}
+} 
