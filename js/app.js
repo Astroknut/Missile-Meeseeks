@@ -1,4 +1,4 @@
-// Variables(Global scope to update player dashboard)
+//Dynamic variables(Global scope to update player dashboard)
 var flurbos = 0,
     round = 1,
     bases = [],
