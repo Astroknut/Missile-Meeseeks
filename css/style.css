@@ -119,6 +119,7 @@ h1 {
 .message {
 	font-family: "Press Start 2P";
 	color: #00ff00;
+	text-shadow: 0 0 3px #00ff00;
 	background: url('../img/dashboard_2.jpg');
 	background-size: cover;
 	display: inline-block;
@@ -130,7 +131,8 @@ h1 {
 .roundMessage {
 	text-align: center;
 	font-family: "Press Start 2P";
-	color: #00ff00;
+	color: #02afc5;
+	text-shadow: 0 0 3px #00ff00;
 	font-size: 50px;
 	padding-top: 30px;
 	height: 100%;
@@ -141,6 +143,7 @@ h1 {
 .scoreBoard {
 	font-family: "Press Start 2P";
 	color: #00ff00;
+	text-shadow: 0 0 3px #00ff00;
 	background: url('../img/dashboard_1.jpg');
 	background-size: cover;
 	display: inline-block;
@@ -153,7 +156,8 @@ h1 {
 .playerScore {
 	text-align: center;
 	font-family: "Press Start 2P";
-	color: #00ff00;
+	color: #02afc5;
+	text-shadow: 0 0 3px #00ff00;
 	font-size: 50px;
 	padding-top: 30px;
 }
@@ -162,6 +166,7 @@ h1 {
 .round {
 	font-family: "Press Start 2P";
 	color: #00ff00;
+	text-shadow: 0 0 3px #00ff00;
 	background: url('../img/dashboard_3.jpg');
 	background-size: cover;
 	height: 50%;
@@ -171,9 +176,11 @@ h1 {
 .roundCount {
 	text-align: center;
 	font-family: "Press Start 2P";
-	color: #f3f315;
+	line-height: 2;
+	color: #ffffff;
+	text-shadow: 0 0 4px #00ff00;
 	font-size: 15px;
-	padding-top: 30px;
+	padding-top: 10px;
 }
 
 /*Margin keeps labels of dashboard divs at top just below top border*/
@@ -185,9 +192,10 @@ h4 {
   clears to push div below all other content*/
 .textScroll {
 	color: #00ff00;
+	text-shadow: 0 0 2px #00ff00;
 	width: 100%;
 	height: 150px;
-	padding: 70px;
+	padding: 50px 20px;
 	background-color: #000000;
 	clear: both;
 }
@@ -292,3 +300,10 @@ to{opacity:1;}
 to{opacity:1;}
 100%{opacity:1;}
 } 
+
+@media (max-width: 700px) {
+	.gameport {
+		width: 100%;
+		height: 100%;
+	}
+}
