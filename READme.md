@@ -2,7 +2,7 @@
 
 # Game Proposal
 
-		*Missle Meeseeks*
+		*Missile Meeseeks*
 
 		Landing Page
 		-Large header displaying title of game
