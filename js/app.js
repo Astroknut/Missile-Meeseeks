@@ -184,6 +184,9 @@ var mrMeeseeksMissiles = (function() {
     }
   };
 
+
+  //***MISSILES***
+
   // Constructor for a Missile, applied to player and meeseeks missiles
   //The arguement 'options' will including beginning and ending coordinates
   //as well as body and trail color of missiles, width and height, and starting explodeRadius
@@ -198,6 +201,8 @@ var mrMeeseeksMissiles = (function() {
     //Initial coordinates set to startX/startY option
     this.x = options.startX;
     this.y = options.startY;
+
+    //State property allows for animation changes and proximity explosions
     this.state = MISSILE.active;
     this.width = 2;
     this.height = 3;
@@ -274,7 +279,7 @@ var mrMeeseeksMissiles = (function() {
         yDistance = this.endY - this.startY;
 
     //Determines length and angle of missile path to ensure flight 
-    //in correct direction and at constant speed
+    //in correct direction and at constant speed(Remove for laser effect)
     var scale = (function() {
 
       //Distance/Angle
