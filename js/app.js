@@ -104,7 +104,7 @@ var mrMeeseeksMissiles = (function() {
   var drawRoundOver = function( missilesLeft, missilesBonus, 
                                basesSaved, basesBonus ) {
     drawGameState();
-    $('.roundCount').html(basesSaved + " bases left, Morty! Click to start the next round!");
+    $('.roundCount').html(basesSaved + " bases left, Morty! You'll get bonus flurbos for using less missiles and saving more bases! Click to start the next round!");
   };
 
   //Shows game over message when all bases destroyed
