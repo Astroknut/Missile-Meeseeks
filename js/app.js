@@ -109,7 +109,7 @@ var mrMeeseeksMissiles = (function() {
 
   //Shows game over message when all bases destroyed
   var gameOver = function() {
-    $('.roundCount').html(flurbos + " flurbos, Morty! Don't worry about all the bases Meeseeks destroyed! Lets go to BLIPS AND CHHIIITTTZZZ!");
+    $('.roundCount').html(flurbos + " flurbos, Morty! Don't worry about all the bases Meeseeks destroyed! Lets go to BLIPS AND CHHIIITTTZZZ! Click the game screen to play again!");
 
   };
 
@@ -257,6 +257,9 @@ var mrMeeseeksMissiles = (function() {
     }
   };
 
+
+  //***PLAYER MISSILES***
+
   //PlayerMissile constructor, inherits from Missile
   function PlayerMissile( source, endX, endY ) {
 
@@ -338,6 +341,59 @@ var mrMeeseeksMissiles = (function() {
     });
   };
 
+  //Determines which missile silo to fire from based on proximity
+  //of target and which silos have remaining missiles
+  var whichMissileSilo = function( x ) {
+    var firedOuter = function( priority1, priority2, priority3) {
+      if( missileSilos[priority1].hasMissile() ) {
+        return priority1;
+      } else if ( missileSilos[priority2].hasMissile() ) {
+        return priority2;
+      } else {
+        return priority3;
+      }
+    };
+
+    var firedCenter = function( priority1, priority2 ) {
+      if( missileSilos[priority1].hasMissile() ) {
+        return priority1;
+      } else {
+        return priority2;
+      }
+    };
+
+    //If all silos are out of missiles
+    if( !missileSilos[0].hasMissile() && 
+        !missileSilos[1].hasMissile() &&
+        !missileSilos[2].hasMissile() ) {
+      return -1;
+    }
+
+    //If target lies in in first third of grid
+    if( x <= CANVAS_WIDTH / 3 ){
+      return firedOuter( 0, 1, 2 );
+
+    //If target lies in middle third of grid
+    } else if( x <= (2 * CANVAS_WIDTH / 3) ) {
+      if ( missileSilos[1].hasMissile() ) {
+        return 1;
+
+      //If middile silo is empty, determine which half of grid
+      //target lies in to determine closest silo
+      } else {
+        return ( x <= CANVAS_WIDTH / 2 ) ? firedCenter( 0, 2 )
+                                         : firedCenter( 2, 0 );
+      }
+
+    //If target lies in last third of grid
+    } else {
+      return firedOuter( 2, 1, 0 );
+    }
+  };
+
+
+
+  //***MEESEEKS MISSILES***
 
   //Meeseeks Missile Constructor, inherits from Missile
   function MeeseeksMissile( targets ) {
@@ -553,56 +609,6 @@ var mrMeeseeksMissiles = (function() {
   // Stop animating current round
   var stopRound = function() {
     clearInterval( timerID );
-  };
-
-  //Determines which missile silo to fire from based on proximity
-  //of target and which silos have remaining missiles
-  var whichMissileSilo = function( x ) {
-    var firedOuter = function( priority1, priority2, priority3) {
-      if( missileSilos[priority1].hasMissile() ) {
-        return priority1;
-      } else if ( missileSilos[priority2].hasMissile() ) {
-        return priority2;
-      } else {
-        return priority3;
-      }
-    };
-
-    var firedCenter = function( priority1, priority2 ) {
-      if( missileSilos[priority1].hasMissile() ) {
-        return priority1;
-      } else {
-        return priority2;
-      }
-    };
-
-    //If all silos are out of missiles
-    if( !missileSilos[0].hasMissile() && 
-        !missileSilos[1].hasMissile() &&
-        !missileSilos[2].hasMissile() ) {
-      return -1;
-    }
-
-    //If target lies in in first third of grid
-    if( x <= CANVAS_WIDTH / 3 ){
-      return firedOuter( 0, 1, 2 );
-
-    //If target lies in middle third of grid
-    } else if( x <= (2 * CANVAS_WIDTH / 3) ) {
-      if ( missileSilos[1].hasMissile() ) {
-        return 1;
-
-      //If middile silo is empty, determine which half of grid
-      //target lies in to determine closest silo
-      } else {
-        return ( x <= CANVAS_WIDTH / 2 ) ? firedCenter( 0, 2 )
-                                         : firedCenter( 2, 0 );
-      }
-
-    //If target lies in last third of grid
-    } else {
-      return firedOuter( 2, 1, 0 );
-    }
   };
 
   //Create event listeners so player can interact with canvas and
