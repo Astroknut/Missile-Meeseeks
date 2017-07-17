@@ -7,29 +7,38 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body class="gamePage">
+	<!--gamePort div contains crosshair container, and canvas element-->
     <div class="gamePort">
       <div class="container">
+      	<!--Crosshair div connected to 'click' event listener, and allows for crosshair cursor style-->
         <div class="crosshair"></div>
       </div>
       <canvas id="canvas" width="698" height="499"></canvas>
     </div>
-
+	
+	<!--Dashboard section contains all content to right of canvas-->
 	<section class="dashboard">
-		<div class="message">
+		
+		<!--Empty div allows for updating round count based on value of 'round' var-->
+		<div class="round">
 			<h4>Round</h4>
-			<div class="roundMessage"></div>
+			<div class="roundCount"></div>
 		</div>
+
+		<!--Empty div allows for updating score count based on value of 'flurbos' var-->
 		<div class="scoreBoard">
 			<h4>Flurbos</h4>
 			<div class="playerScore"></div>
 		</div>
-		<div class="round">
+
+		<!--roundMessage div connected to 'drawRoundOver' function to display remaining bases at end of each round, as well as game over message-->
+		<div class="message">
 			<h4>Mission Updates:</h4>
-			<p class="roundCount">Hurry Morty! Click on the game screen to start the 1st round! When Meeseeks starts firing at the bases, use your cursor to target your missiles and keep him from destroying everything! Be careful though, he's go to try to destroy the missile silos you're using!</p>
+			<p class="roundMessage">Hurry Morty! Click on the game screen to start the 1st round! When Meeseeks starts firing at the bases, use your cursor to target your missiles and keep him from destroying everything! Be careful though, he's go to try to destroy the missile silos you're using!</p>
 		</div>
 	</section>
 
-	
+	<!--Div contains text connected to typewriter animation in css. Each <p> is connected to a timed delay for effect across multiple lines-->
 	<div class="textScroll">
 		<p class="narrator">Jerry reeeallllyyyy outdid himself this time, huh Morty? He went and asked Mr. Meeseeks to help him learn to build a website</p>
 		<p class="narrator">using Vanilla Javascript. Morty do you know what that means? DO YOU, MORTY??? It means that this planet isn't safe anymore, Morty.</p> 

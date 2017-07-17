@@ -97,19 +97,19 @@ var mrMeeseeksMissiles = (function() {
 
   //Show current round
   var showRound = function() {
-    $('.roundMessage').html(round);
+    $('.roundCount').html(round);
   };
 
   //Message update at the end of each round, tells player how many bases remain
   var drawRoundOver = function( missilesLeft, missilesBonus, 
                                basesSaved, basesBonus ) {
     drawGameState();
-    $('.roundCount').html(basesSaved + " bases left, Morty! You'll get bonus flurbos for using less missiles and saving more bases! Click to start the next round!");
+    $('.roundMessage').html(basesSaved + " bases left, Morty! You'll get bonus flurbos for using less missiles and saving more bases! Click to start the next round!");
   };
 
   //Shows game over message when all bases destroyed
   var gameOver = function() {
-    $('.roundCount').html(flurbos + " flurbos, Morty! Don't worry about all the bases Meeseeks destroyed! Lets go to BLIPS AND CHHIIITTTZZZ! Click the game screen to play again!");
+    $('.roundMessage').html(flurbos + " flurbos, Morty! Don't worry about all the bases Meeseeks destroyed! Lets go to BLIPS AND CHHIIITTTZZZ! Click the game screen to play again!");
 
   };
 
@@ -309,7 +309,7 @@ var mrMeeseeksMissiles = (function() {
       this.state = MISSILE.exploding;
     }
 
-    //Active missiles continue path
+    //Active missile-s continue path
     if( this.state === MISSILE.active ) {
       this.x += this.dx;
       this.y += this.dy;
