@@ -109,7 +109,7 @@ var mrMeeseeksMissiles = (function() {
 
   //Shows game over message when all bases destroyed
   var gameOver = function() {
-    $('.roundCount').html('GAME OVER, MORTY! Lets go to BLIPS AND CHHIIITTTZZZ!');
+    $('.roundCount').html(flurbos + " flurbos, Morty! Don't worry about all the bases Meeseeks destroyed! Lets go to BLIPS AND CHHIIITTTZZZ!");
 
   };
 
@@ -312,7 +312,7 @@ var mrMeeseeksMissiles = (function() {
 
   // Creates missiles to fire at targeted location
   var playerShoot = function( x, y ) {
-    if( y >= 30 && y <= 390 ) {
+    if( y >= 50 && y <= 390 ) {
       var source = whichMissileSilo( x );
       if( source === -1 ){ // No missiles left
         return;
