@@ -131,7 +131,8 @@ h1 {
 	text-align: center;
 	font-family: "Press Start 2P";
 	color: #00ff00;
-	font-size: 15px;
+	font-size: 50px;
+	padding-top: 30px;
 	height: 100%;
 }
 
@@ -171,8 +172,8 @@ h1 {
 	text-align: center;
 	font-family: "Press Start 2P";
 	color: #f3f315;
-	font-size: 120px;
-	padding-top: 40px;
+	font-size: 15px;
+	padding-top: 30px;
 }
 
 /*Margin keeps labels of dashboard divs at top just below top border*/

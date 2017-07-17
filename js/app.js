@@ -97,19 +97,19 @@ var mrMeeseeksMissiles = (function() {
 
   //Show current round
   var showRound = function() {
-    $('.roundCount').html(round);
+    $('.roundMessage').html(round);
   };
 
   //Message update at the end of each round, tells player how many bases remain
   var drawRoundOver = function( missilesLeft, missilesBonus, 
                                basesSaved, basesBonus ) {
     drawGameState();
-    $('.roundMessage').html(basesSaved + " bases left, Morty! Click to start the next round!");
+    $('.roundCount').html(basesSaved + " bases left, Morty! Click to start the next round!");
   };
 
   //Shows game over message when all bases destroyed
   var gameOver = function() {
-    $('.roundMessage').html('GAME OVER, MORTY! Lets go to BLIPS AND CHHIIITTTZZZ!');
+    $('.roundCount').html('GAME OVER, MORTY! Lets go to BLIPS AND CHHIIITTTZZZ!');
 
   };
 
