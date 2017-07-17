@@ -50,6 +50,7 @@ h1 {
 .header {
 	font-family: "Press Start 2P";
 	color: #00ff00;
+	text-shadow: 0 0 15px #02afc5;
 	text-align: center;
 	font-size: 50px;
 }
@@ -68,6 +69,7 @@ h1 {
 	font-family: "Press Start 2P";
 	font-size: 50px;
 	color: #02afc5;
+	text-shadow: 0 0 15px #00ff00;
 	background-color: transparent;
 	border: 1px solid transparent;
 }
@@ -119,7 +121,7 @@ h1 {
 .message {
 	font-family: "Press Start 2P";
 	color: #00ff00;
-	text-shadow: 0 0 3px #00ff00;
+	text-shadow: 0 0 3px #02afc5;
 	background: url('../img/dashboard_2.jpg');
 	background-size: cover;
 	display: inline-block;
@@ -143,7 +145,7 @@ h1 {
 .scoreBoard {
 	font-family: "Press Start 2P";
 	color: #00ff00;
-	text-shadow: 0 0 3px #00ff00;
+	text-shadow: 0 0 3px #02afc5;
 	background: url('../img/dashboard_1.jpg');
 	background-size: cover;
 	display: inline-block;
@@ -166,7 +168,7 @@ h1 {
 .round {
 	font-family: "Press Start 2P";
 	color: #00ff00;
-	text-shadow: 0 0 3px #00ff00;
+	text-shadow: 0 0 3px #02afc5;
 	background: url('../img/dashboard_3.jpg');
 	background-size: cover;
 	height: 50%;
@@ -192,7 +194,7 @@ h4 {
   clears to push div below all other content*/
 .textScroll {
 	color: #00ff00;
-	text-shadow: 0 0 2px #00ff00;
+	text-shadow: 0 0 2px #02afc5;
 	width: 100%;
 	height: 150px;
 	padding: 50px 20px;

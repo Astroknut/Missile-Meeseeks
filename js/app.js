@@ -265,7 +265,7 @@ var mrMeeseeksMissiles = (function() {
 
     Missile.call( this, { startX: ms.x,  startY: ms.y,
                           endX: endX,     endY: endY, 
-                          color: '#ff0000', trailColor: '#cccccc' } );
+                          color: '#00ff00', trailColor: '#02afc5' } );
 
     var xDistance = this.endX - this.startX,
         yDistance = this.endY - this.startY;
@@ -353,7 +353,7 @@ var mrMeeseeksMissiles = (function() {
 
     Missile.call( this, { startX: startX,  startY: startY, 
                           endX: target[0], endY: target[1],
-                          color: '#0d0015', trailColor: '#eeeeee' } );
+                          color: '#02afc5', trailColor: '#00ff00' } );
 
     framesToTarget = ( 450 - 30 * round ) / speed;
     if( framesToTarget < 20 ) {
