@@ -65,6 +65,9 @@ var mrMeeseeksMissiles = (function() {
     playerMissiles = [];
     meeseeksMissiles = [];
     createMeeseeksMissiles();
+    ctx.fillStyle = "#ff0000";
+    ctx.font = '30px bold';
+    ctx.fillText("CLICK TO START ROUND", 150, 200);
     drawGameState();
   };
 
@@ -94,6 +97,8 @@ var mrMeeseeksMissiles = (function() {
   var drawFlurbos = function() {
     $('.playerScore').html(flurbos);
   };
+
+
 
   //Show current round
   var showRound = function() {

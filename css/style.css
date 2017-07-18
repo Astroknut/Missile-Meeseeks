@@ -169,8 +169,7 @@ h1 {
 	font-family: "Press Start 2P";
 	color: #00ff00;
 	text-shadow: 0 0 3px #02afc5;
-	background: url('../img/dashboard_3.jpg');
-	background-size: cover;
+	background-color: #010504;
 	height: 50%;
 }
 
@@ -179,8 +178,8 @@ h1 {
 	text-align: center;
 	font-family: "Press Start 2P";
 	line-height: 2;
-	color: #ffffff;
-	text-shadow: 0 0 4px #00ff00;
+	color: #00ff00;
+	text-shadow: 0 0 4px #02afc5;
 	font-size: 15px;
 	padding-top: 10px;
 }
